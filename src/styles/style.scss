@@ -1,0 +1,121 @@
+@import 'mixins';
+@import 'null';
+@import 'global';
+@import 'vars';
+@import 'fonts';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tags-app {
+  &__box {
+    margin: 10rem;
+    max-width: 60rem;
+    width: 60rem;
+    border: 1px solid gray;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+  &__wrapper-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  &__input {
+    border: 1px solid rgb(180, 180, 180);
+    padding: 1rem;
+    margin-right: 1.5rem;
+    font-size: 2rem;
+    border-radius: 5px;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+  &__btn-add,
+  &__btn-save {
+    background: tomato;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: all 0.8s ease;
+    &:hover {
+      background: rgb(255, 48, 12);
+    }
+  }
+  &__btn-save {
+    font-size: 1.5rem;
+    display: block;
+    margin: 1rem 0 1rem auto;
+    display: none;
+  }
+  &__readonly-btn {
+    display: none;
+    align-items: center;
+    & label {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+  }
+  &__block-tags {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+  &__area-items {
+    border-top: 1px solid #000;
+    padding-top: 6rem;
+  }
+}
+.area-item {
+  border: 1px solid #333;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  &__btn-close {
+    margin: 0 0 0 auto;
+    font-size: 1.8rem;
+    padding: 1rem;
+    background: #888;
+    border-radius: 50%;
+  }
+  &.animation {
+    animation: opacity 1s ease-in-out;
+  }
+}
+.tag {
+  padding: 1rem;
+  font-size: 1.3rem;
+  background: green;
+  border: 1px solid rgb(0, 103, 0);
+  color: #fff;
+  border-radius: 5px;
+}
+.tag-btn-close {
+  color: rgb(0, 82, 0);
+  margin-left: 0.5rem;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
